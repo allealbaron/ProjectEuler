@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Utilities.Math
 {
@@ -16,10 +15,10 @@ namespace Utilities.Math
         /// </summary>
         /// <param name="number">Number</param>
         /// <returns>Returns true if the number is pandigital</returns>
-        static public bool IsPandigital(Int64 number)
+        static public bool IsPandigital(string number)
         {
             Dictionary<Int64, int> repeatedNumbers =
-                                                 (number.ToString().ToCharArray()
+                                                 (number.ToCharArray()
                                                      .GroupBy(c => c)
                                                      .ToDictionary(
                                                          c => Int64.Parse(c.Key.ToString()),
@@ -33,6 +32,18 @@ namespace Utilities.Math
             }
 
             return result;
+
+        }
+
+        /// <summary>
+        /// Checks if a number is Pandigital
+        /// </summary>
+        /// <param name="number">Number</param>
+        /// <returns>Returns true if the number is pandigital</returns>
+        static public bool IsPandigital(Int64 number)
+        {
+
+            return IsPandigital(number.ToString());
 
         }
 
