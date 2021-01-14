@@ -173,7 +173,7 @@ namespace Utilities.Math
         }
 
         /// <summary>
-        /// Returns Modulas Pow
+        /// Returns Modular Pow
         /// </summary>
         /// <param name="powBase">Base</param>
         /// <param name="powExponent">Exponent</param>
