@@ -1,34 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Utilities.Math;
 
 namespace Task002
 {
     class Program
     {
-				
-		static int TOP_VALUE = 4000000;
+	    /// <summary>
+        /// Top Value
+        /// </summary>
+        const int TOP_VALUE = 4000000;
 		
+        /// <summary>
+        /// Main Thread
+        /// </summary>
         static void Main()
         {
-            List<int> fibonacci = new List<int>();
 
-            fibonacci.Add(1);
-            fibonacci.Add(2);
+            Int64 temp = 0;
+            int i = 3;
 
-            int result = 0;
-
-            while (result < TOP_VALUE)
+            while (temp < TOP_VALUE)
             {
-                result = fibonacci[fibonacci.Count - 1] + fibonacci[fibonacci.Count - 2];
-                fibonacci.Add(result);
+                temp = Fibonacci.GetFibonacciTermAsInt64(i);
+                i++;
             }
 
-            int sum = (from f in fibonacci
-                       where (f % 2 == 0) && (f<TOP_VALUE)
-                       select f).Sum();
+            Int64 solution = (from f in Fibonacci.GetListFibonacci()
+                              where (Int64.Parse(f) % 2 == 0) && (Int64.Parse(f)<TOP_VALUE)
+                       select Int64.Parse(f)).Sum();
+            
+            Console.WriteLine("Solution: {0}", solution);
 
-            Console.WriteLine("Solution: {0}", sum);
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Utilities.Math;
 
 namespace Task024
 {
@@ -18,22 +19,8 @@ namespace Task024
         const int TARGET = 1000000;
 
         /// <summary>
-        /// Gets factorial
+        /// Main thread
         /// </summary>
-        /// <param name="number">Number</param>
-        /// <returns>Factorial</returns>
-        static int Factorial(int number)
-        {
-            if (number < 2)
-            {
-                return 1;
-            }
-            else
-            {
-                return number * Factorial(number - 1);
-            }
-        }
-
         static void Main()
         {
 
@@ -51,9 +38,9 @@ namespace Task024
             {
                 if (!numbers[i])
                 {
-                    if (counter + Factorial(position) < TARGET)
+                    if (counter + Factorial.GetFactorialTermAsInt(position+1) < TARGET)
                     {
-                        counter += Factorial(position);
+                        counter += Factorial.GetFactorialTermAsInt(position + 1);
                     }
                     else
                     {
@@ -72,6 +59,7 @@ namespace Task024
             }
             
             Console.WriteLine("Solution: {0}", solution.ToString());
+
         }
     }
 }

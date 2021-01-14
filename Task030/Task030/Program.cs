@@ -5,7 +5,10 @@ namespace Task030
 {
     class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Main Thread
+        /// </summary>
+        static void Main()
         {
 
             int solution = (from n1 in Enumerable.Range(0, 10)
@@ -21,6 +24,7 @@ namespace Task030
 
 
             Console.WriteLine("Solution: {0}", solution);
+
         }
     }
 }

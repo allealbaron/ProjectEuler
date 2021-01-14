@@ -36,6 +36,10 @@ namespace Task014
             }
             return result;
         }
+
+        /// <summary>
+        /// Main Thread
+        /// </summary>
         static void Main()
         {
             int solution = (from n in Enumerable.Range(1, 1000000)

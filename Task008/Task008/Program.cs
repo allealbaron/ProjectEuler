@@ -6,6 +6,9 @@ namespace Task008
 {
     class Program
     {
+        /// <summary>
+        /// Main Thread
+        /// </summary>
         static void Main()
         {
             const int numberOfElements = 13;
@@ -20,6 +23,7 @@ namespace Task008
             for (int i = 0; i < numbers.Count - numberOfElements; i++)
             {
                 Int64 accumulator = 1;
+
                 for (int j = i; numbers[j]!= 0 && j < i + numberOfElements; j++)
                 {
                     accumulator *= numbers[j];

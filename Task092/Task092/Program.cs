@@ -39,6 +39,9 @@ namespace Task092
 
         }
 
+        /// <summary>
+        /// Main Thread
+        /// </summary>
         static void Main()
         {
 

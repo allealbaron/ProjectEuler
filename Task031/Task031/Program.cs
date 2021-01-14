@@ -49,7 +49,9 @@ namespace Task031
 
         }
                
-        
+        /// <summary>
+        /// Main Thread
+        /// </summary>
         static void Main()
         {
             Console.WriteLine("Solutions: {0}", GetSolutions(0,0,0));

@@ -5,9 +5,18 @@ namespace Task009
 {
     class Program
     {
+
+        /// <summary>
+        /// Max number
+        /// </summary>
+        private const int MAX_NUMBER = 1000;
+
+        /// <summary>
+        /// Main Thread
+        /// </summary>
         static void Main()
         {
-            const int MAX_NUMBER = 1000;
+
             Int64 result = (from t1 in Enumerable.Range(1, MAX_NUMBER)
                     from t2 in Enumerable.Range(1, MAX_NUMBER)
                     where (t1 < t2) 
@@ -16,6 +25,7 @@ namespace Task009
                     select (t1*t2*(MAX_NUMBER - (t1+t2)))).FirstOrDefault();
 
             Console.WriteLine("Hello World! {0}", result);
+
         }
     }
 }

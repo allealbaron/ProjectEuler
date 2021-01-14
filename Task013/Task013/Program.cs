@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Utilities.Math;
 
 namespace Task013
 {
     class Program
     {
+        /// <summary>
+        /// Main Thread
+        /// </summary>
         static void Main()
         {           
             List<string> Numbers = new List<string>()
@@ -113,32 +116,15 @@ namespace Task013
                 "53503534226472524250874054075591789781264330331690"
             };
 
-            StringBuilder reversedSolution = new StringBuilder();
+            string solution = "0";
 
-            int carryover = 0;
-
-            for (int i = Numbers[0].Length - 1; i >= 0; i--)
+            foreach (string s in Numbers)
             {
-              
-                int sumColumn = (from n in Numbers
-                        select int.Parse(n[i].ToString())).Sum()+ carryover;
-
-                reversedSolution.Append(sumColumn % 10);
-
-                carryover = sumColumn / 10;
-
+                solution = Arithmetic.AddNumbers(solution, s);
             }
 
-            reversedSolution.Append(carryover);
+            Console.WriteLine("Solution: {0}", solution.Substring(0,10));
 
-            StringBuilder solution = new StringBuilder();
-
-            for (int i = reversedSolution.Length - 1; i >= 0; i--)
-            {
-                solution.Append(reversedSolution[i]);
-            }
-
-            Console.WriteLine("Hello World! {0}", solution.ToString().Substring(0,10));
         }
     }
 }

@@ -42,6 +42,9 @@ namespace Task052
 
         }
 
+        /// <summary>
+        /// Main Thread
+        /// </summary>
         static void Main()
         {
             int solution = (from t in Enumerable.Range(1, 300000)

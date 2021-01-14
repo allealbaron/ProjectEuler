@@ -5,6 +5,9 @@ namespace Task006
 {
     class Program
     {
+        /// <summary>
+        /// Main Thread
+        /// </summary>
         static void Main()
         {
             const int maxItem = 100;

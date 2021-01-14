@@ -5,7 +5,7 @@ namespace Task001
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
 
             int result = (from i in Enumerable.Range(1, 999)
