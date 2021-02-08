@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace Utilities.Math
@@ -19,7 +18,7 @@ namespace Utilities.Math
         /// </summary>
         public static void AddNextTerm()
         {
-            FactorialCalculated.Add(Arithmetic.MultiplyNumbers(FactorialCalculated[^1], 
+            FactorialCalculated.Add(Arithmetic.MultiplyNumbers(FactorialCalculated[^1],
                                         FactorialCalculated.Count.ToString()));
         }
 

@@ -13,9 +13,9 @@ namespace Task036
         {
 
             int result = (from n in Enumerable.Range(1, 1000000)
-                     where n%2== 1 && Palindrome.IsPalindromic(n)
-                     && Palindrome.IsPalindromic(Convert.ToString(n, 2))
-                     select n).Sum();
+                          where n % 2 == 1 && Palindrome.IsPalindromic(n)
+                          && Palindrome.IsPalindromic(Convert.ToString(n, 2))
+                          select n).Sum();
 
             Console.WriteLine("Solution: {0}", result);
 

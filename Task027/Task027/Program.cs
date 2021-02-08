@@ -14,19 +14,19 @@ namespace Task027
         /// <returns>value</returns>
         static int CalculateIteration(int a, int b, int n)
         {
-            return ((n * n) + a*n + b);
+            return ((n * n) + a * n + b);
         }
 
-		/// <summary>
+        /// <summary>
         /// Main Thread
         /// </summary>
         static void Main()
         {
-            
+
             int maxPrimeSequence = 0;
-            int a = 0; 
+            int a = 0;
             int b = 0;
-            
+
             for (int i = -999; i < 1000; i++)
             {
                 for (int j = -1000; j <= 1000; j++)
@@ -49,7 +49,7 @@ namespace Task027
                 }
             }
 
-            Console.WriteLine("Solution: a = {0} , b = {1}, n = {2}, a * b = {3}", a, b, maxPrimeSequence, a*b);
+            Console.WriteLine("Solution: a = {0} , b = {1}, n = {2}, a * b = {3}", a, b, maxPrimeSequence, a * b);
 
         }
     }

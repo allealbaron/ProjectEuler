@@ -27,7 +27,7 @@ namespace Task045
 
             if (value % 6 == 0)
             {
-                return (int) (value / 6) ;
+                return (int)(value / 6);
             }
             else
             {

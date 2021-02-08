@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 
 namespace Utilities.Math
@@ -46,7 +45,7 @@ namespace Utilities.Math
             {
                 result = false;
             }
-            else 
+            else
             {
                 List<char> n1 = number1.ToCharArray().ToList();
                 List<char> n2 = number2.ToCharArray().ToList();

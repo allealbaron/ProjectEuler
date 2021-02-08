@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Task092
@@ -46,8 +45,8 @@ namespace Task092
         {
 
             int solution = (from t in Enumerable.Range(1, 10000000)
-                           where GetLoopNumber(t) == 89
-                           select t).Count();
+                            where GetLoopNumber(t) == 89
+                            select t).Count();
 
             Console.WriteLine("Solution: {0}", solution);
 

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Linq;
-using System.Collections.Generic;
 using System.Text;
 
 namespace Utilities.Math
@@ -10,6 +8,41 @@ namespace Utilities.Math
     /// </summary>
     public class Arithmetic
     {
+        /// <summary>
+        /// Calculates the square root from a number with an epsilon accuracy
+        /// </summary>
+        /// <param name="number">Number</param>
+        /// <returns>Sqrt</returns>
+        public static decimal Sqrt(decimal number)
+        {
+            return Sqrt(number, 0.0000000000000000000000000000000000000000000000001M);
+        }
+
+        /// <summary>
+        /// Calculates the square root from a number with an epsilon accuracy
+        /// </summary>
+        /// <param name="number">Number</param>
+        /// <param name="epsilon">Accuracy</param>
+        /// <returns>Sqrt</returns>
+        public static decimal Sqrt(decimal number, decimal epsilon)
+        {
+            if (number < 0)
+            {
+                throw new OverflowException("Cannot calculate square root from a negative number");
+            }
+            decimal current = (decimal)System.Math.Sqrt((double)number), previous;
+            previous = 0;
+            do
+            {
+                previous = current;
+                if (previous == 0.0M) return 0;
+                current = (previous + number / previous) / 2;
+            }
+            while (System.Math.Abs(previous - current) > epsilon);
+
+            return current;
+        }
+
         /// <summary>
         /// Reverses a string
         /// </summary>

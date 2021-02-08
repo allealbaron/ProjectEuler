@@ -14,7 +14,7 @@ namespace Task054
         /// <returns>Returns 1 if player 1 wins, 2 otherwise</returns>
         static int CompareCards(PokerHand player1, PokerHand player2)
         {
-            for (int i = player1.Hand.Count-1; i >= 0; i--)
+            for (int i = player1.Hand.Count - 1; i >= 0; i--)
             {
                 if (player1.Hand[i].Value > player2.Hand[i].Value)
                 {
@@ -157,7 +157,7 @@ namespace Task054
 
                 for (int i = 0; i < items.Length; i++)
                 {
-                    PokerCard card = new PokerCard(items[i][0..^1],items[i][^1..]);
+                    PokerCard card = new PokerCard(items[i][0..^1], items[i][^1..]);
 
                     if (i < 5)
                     {

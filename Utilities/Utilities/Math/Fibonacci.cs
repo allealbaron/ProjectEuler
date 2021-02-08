@@ -19,7 +19,7 @@ namespace Utilities.Math
         /// </summary>
         public static void AddNextTerm()
         {
-            FibonacciCalculated.Add(Arithmetic.AddNumbers(FibonacciCalculated[^1] , FibonacciCalculated[^2]));
+            FibonacciCalculated.Add(Arithmetic.AddNumbers(FibonacciCalculated[^1], FibonacciCalculated[^2]));
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace Utilities.Math
         /// <param name="index">Index to achieve</param>
         public static void CalculateTermsUntilIndex(int index)
         {
-            
+
             while (FibonacciCalculated.Count < index)
             {
                 AddNextTerm();
@@ -56,7 +56,7 @@ namespace Utilities.Math
 
             CalculateTermsUntilIndex(index);
 
-            return FibonacciCalculated[index-1];
+            return FibonacciCalculated[index - 1];
 
         }
 

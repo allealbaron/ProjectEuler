@@ -1,20 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Task054
 {
     /// <summary>
     /// Poker Card
     /// </summary>
-    public class PokerCard: IComparable
+    public class PokerCard : IComparable
     {
         /// <summary>
         /// Suits: Hearts, Clubs, Spades, Diamonds
         /// </summary>
         public enum SuitEnum
-        { 
+        {
             C = 1, //Clubs
             H = 2, //Hearts
             S = 3, //Spades
@@ -25,17 +23,17 @@ namespace Task054
         /// Value
         /// </summary>
         public enum ValueEnum
-        { 
+        {
             Two = 2,
-            Three =3 ,
+            Three = 3,
             Four = 4,
             Five = 5,
             Six = 6,
-            Seven= 7,
-            Eight= 8,
+            Seven = 7,
+            Eight = 8,
             Nine = 9,
-            T= 10,
-            J= 11,
+            T = 10,
+            J = 11,
             Q = 12,
             K = 13,
             A = 14

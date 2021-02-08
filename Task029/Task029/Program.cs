@@ -38,12 +38,12 @@ namespace Task029
                     foreach (KeyValuePair<Int64, Int64> p in kvp.Value)
                     {
                         powDescribed.Append(
-                            p.Key.ToString("D4")).Append("@").Append((p.Value*i).ToString("D4"));
+                            p.Key.ToString("D4")).Append("@").Append((p.Value * i).ToString("D4"));
                     }
                     if (!pows.Contains(powDescribed.ToString()))
                     {
                         pows.Add(powDescribed.ToString());
-                    }                    
+                    }
                 }
             }
 

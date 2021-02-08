@@ -48,12 +48,12 @@ namespace Task052
         static void Main()
         {
             int solution = (from t in Enumerable.Range(1, 300000)
-                    where CompareList(OrderDigits(t), OrderDigits(2 * t)) &&
-                          CompareList(OrderDigits(t), OrderDigits(3 * t)) &&
-                          CompareList(OrderDigits(t), OrderDigits(4 * t)) &&
-                          CompareList(OrderDigits(t), OrderDigits(5 * t)) &&
-                          CompareList(OrderDigits(t), OrderDigits(6 * t))
-                    select t).Min();
+                            where CompareList(OrderDigits(t), OrderDigits(2 * t)) &&
+                                  CompareList(OrderDigits(t), OrderDigits(3 * t)) &&
+                                  CompareList(OrderDigits(t), OrderDigits(4 * t)) &&
+                                  CompareList(OrderDigits(t), OrderDigits(5 * t)) &&
+                                  CompareList(OrderDigits(t), OrderDigits(6 * t))
+                            select t).Min();
 
             Console.WriteLine("Solution: {0}", solution);
         }

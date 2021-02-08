@@ -20,19 +20,19 @@ namespace Task050
             PrimeNumber.CalculateTermsUntilValue(MAX_VALUE);
 
 
-            int i = 1;            
-            Int64 primeNumber = PrimeNumber.GetPrimeTerm(i);                       
+            int i = 1;
+            Int64 primeNumber = PrimeNumber.GetPrimeTerm(i);
 
-            while (primeNumber< MAX_VALUE)            
+            while (primeNumber < MAX_VALUE)
             {
                 int index = 1;
-                
+
                 while (PrimeNumber.GetPrimeTerm((int)index) < System.Math.Sqrt(primeNumber))
                 {
                     Int64 sum = 0;
                     int count = 0;
                     int j = index;
-                    
+
                     while (sum < primeNumber)
                     {
                         sum += PrimeNumber.GetPrimeTerm((int)j);
@@ -42,7 +42,7 @@ namespace Task050
 
                     if (sum == primeNumber)
                     {
-                    
+
                         if (Solutions.ContainsKey(primeNumber))
                         {
                             if (count > Solutions[primeNumber])
@@ -50,21 +50,21 @@ namespace Task050
                                 Solutions[primeNumber] = count;
                             }
                         }
-                        
+
                         else
                         {
                             Solutions.Add(primeNumber, count);
                         }
 
                     }
-                    
+
                     index++;
-                
+
                 }
-                
+
                 i++;
                 primeNumber = PrimeNumber.GetPrimeTerm(i);
-            
+
             }
 
             Console.WriteLine("Solution: {0}", Solutions.Aggregate((l, r) => l.Value > r.Value ? l : r).Key);

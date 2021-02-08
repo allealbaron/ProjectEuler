@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Utilities.Math;
 
 namespace Task013
@@ -11,7 +10,7 @@ namespace Task013
         /// Main Thread
         /// </summary>
         static void Main()
-        {           
+        {
             List<string> Numbers = new List<string>()
             {
                 "37107287533902102798797998220837590246510135740250",
@@ -123,7 +122,7 @@ namespace Task013
                 solution = Arithmetic.AddNumbers(solution, s);
             }
 
-            Console.WriteLine("Solution: {0}", solution.Substring(0,10));
+            Console.WriteLine("Solution: {0}", solution.Substring(0, 10));
 
         }
     }

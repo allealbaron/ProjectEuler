@@ -1,6 +1,6 @@
 ﻿using System;
-using Utilities.Math;
 using System.Numerics;
+using Utilities.Math;
 
 namespace Task053
 {
@@ -22,9 +22,9 @@ namespace Task053
                     BigInteger product = 1;
                     for (int j = 0; j < r; j++)
                     {
-                        product *= (n-j);
+                        product *= (n - j);
                     }
-                    BigInteger result = product / BigInteger.Parse(Factorial.GetFactorialTerm(r+1));
+                    BigInteger result = product / BigInteger.Parse(Factorial.GetFactorialTerm(r + 1));
 
                     if (result > 1000000)
                     {

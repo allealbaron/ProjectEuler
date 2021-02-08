@@ -21,9 +21,9 @@ namespace Task041
             PrimeNumber.CalculateTermsUntilValue(MAX_NUMBER);
 
             List<Int64> solution = (from p in PrimeNumber.GetListPrimes()
-                    where ((p.ToString().Length == 4) || (p.ToString().Length == 7)) 
-                        && Pandigital.IsPandigital(p)
-                     select p).ToList();
+                                    where ((p.ToString().Length == 4) || (p.ToString().Length == 7))
+                                        && Pandigital.IsPandigital(p)
+                                    select p).ToList();
 
             Console.WriteLine("Solution: {0}", solution.Max());
 

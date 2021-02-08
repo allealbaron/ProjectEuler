@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 namespace Utilities.Math
 {
@@ -13,8 +11,8 @@ namespace Utilities.Math
         /// Numbers 0-9
         /// </summary>
         public enum Number
-        { 
-            zero =0,
+        {
+            zero = 0,
             one = 1,
             two = 2,
             three = 3,
@@ -47,7 +45,7 @@ namespace Utilities.Math
         /// Tens: 20,30,40...
         /// </summary>
         public enum Tens
-        { 
+        {
             twenty = 2,
             thirty = 3,
             forty = 4,
@@ -99,7 +97,7 @@ namespace Utilities.Math
 
             }
 
-            if (number>=10 && number <= 19)
+            if (number >= 10 && number <= 19)
             {
                 result.Append((FirstTen)number);
                 number = 0;

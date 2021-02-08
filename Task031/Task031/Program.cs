@@ -8,7 +8,7 @@ namespace Task031
         /// <summary>
         /// Coins used in the United Kingdom
         /// </summary>
-        static readonly List<int> Coins = new List<int>() {1, 2, 5, 10, 20, 50, 100, 200};
+        static readonly List<int> Coins = new List<int>() { 1, 2, 5, 10, 20, 50, 100, 200 };
 
         /// <summary>
         /// Amount we want to achieve
@@ -24,7 +24,7 @@ namespace Task031
         /// <returns>Partial number of solutions</returns>
         static int GetSolutions(int accumulated, int index, int solutions)
         {
-           
+
             for (int i = 0; i <= TARGET / Coins[index]; i++)
             {
                 int newValue = accumulated + (Coins[index] * i);
@@ -44,17 +44,17 @@ namespace Task031
                     }
                 }
             }
-            
+
             return solutions;
 
         }
-               
+
         /// <summary>
         /// Main Thread
         /// </summary>
         static void Main()
         {
-            Console.WriteLine("Solutions: {0}", GetSolutions(0,0,0));
+            Console.WriteLine("Solutions: {0}", GetSolutions(0, 0, 0));
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Task040
 
             int solution = 1;
 
-            for (int j = 1; j < maxIndex; j = j * 10)
+            for (int j = 1; j < maxIndex; j *= 10)
             {
                 solution *= int.Parse(number[j].ToString());
             }

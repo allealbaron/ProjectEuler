@@ -9,7 +9,7 @@ namespace Task054
         /// Hand ranks
         /// </summary>
         public enum HandRankEnum
-        {            
+        {
             HighCard,
             OnePair,
             TwoPairs,
@@ -219,8 +219,8 @@ namespace Task054
             bool result = false;
 
             int count = (from c in Hand
-                        where c.Suit == Hand[0].Suit
-                        select c.Suit).Count();
+                         where c.Suit == Hand[0].Suit
+                         select c.Suit).Count();
 
             result = (count == 5);
 
@@ -275,7 +275,7 @@ namespace Task054
             {
                 for (int i = 1; result && i < Hand.Count; i++)
                 {
-                    result = (pivotCard.Suit == Hand[i].Suit && pivotCard.Value + 1 == Hand[i].Value );
+                    result = (pivotCard.Suit == Hand[i].Suit && pivotCard.Value + 1 == Hand[i].Value);
                     pivotCard = Hand[i];
                 }
             }
@@ -307,7 +307,7 @@ namespace Task054
                 result = (pivotCard.Suit == Hand[i].Suit && pivotCard.Value + 1 == Hand[i].Value);
                 pivotCard = Hand[i];
 
-                if (!result && i == Hand.Count-1 && Hand[0].Suit == Hand[i].Suit &&
+                if (!result && i == Hand.Count - 1 && Hand[0].Suit == Hand[i].Suit &&
                     Hand[i].Value == PokerCard.ValueEnum.A && Hand[0].Value == PokerCard.ValueEnum.Two)
                 {
                     result = true;
@@ -335,7 +335,7 @@ namespace Task054
 
             PokerCard pivotCard = Hand[0];
 
-            for (int i = 1; result && count <four && i < Hand.Count; i++)
+            for (int i = 1; result && count < four && i < Hand.Count; i++)
             {
                 result = (pivotCard.Suit != Hand[i].Suit && pivotCard.Value == Hand[i].Value);
                 count++;
@@ -373,7 +373,7 @@ namespace Task054
 
             for (int i = 0; !result && i < Hand.Count; i++)
             {
-                for (int j = i+1; !result && j < Hand.Count; j++)
+                for (int j = i + 1; !result && j < Hand.Count; j++)
                 {
                     result = (Hand[i].Suit != Hand[j].Suit && Hand[i].Value == Hand[j].Value);
 
@@ -439,6 +439,6 @@ namespace Task054
             return result;
 
         }
-        
+
     }
 }

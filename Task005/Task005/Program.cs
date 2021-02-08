@@ -36,7 +36,7 @@ namespace Task005
             }
 
             Int64 result = (from p in factors
-                     select Int64.Parse(Math.Pow(p.Key, p.Value).ToString())).Aggregate((total, next) => total* next);
+                            select Int64.Parse(Math.Pow(p.Key, p.Value).ToString())).Aggregate((total, next) => total * next);
 
             Console.WriteLine("Solution: {0}", result);
         }

@@ -24,7 +24,7 @@ namespace Task008
             {
                 Int64 accumulator = 1;
 
-                for (int j = i; numbers[j]!= 0 && j < i + numberOfElements; j++)
+                for (int j = i; numbers[j] != 0 && j < i + numberOfElements; j++)
                 {
                     accumulator *= numbers[j];
                 }

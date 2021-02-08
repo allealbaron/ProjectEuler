@@ -20,14 +20,14 @@ namespace Task022
         /// <returns>Value</returns>
         static int GetNameValue(string name)
         {
-            
+
             int result = 0;
-            
+
             foreach (char c in name.ToCharArray())
             {
                 result += ((int)c - 64);
             }
-            
+
             return result;
 
         }
@@ -48,7 +48,7 @@ namespace Task022
 
             for (int i = 0; i < Names.Count; i++)
             {
-                scores += ((i+1)* GetNameValue(Names[i]));
+                scores += ((i + 1) * GetNameValue(Names[i]));
             }
 
             Console.WriteLine("Solution: {0}", scores);

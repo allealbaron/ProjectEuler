@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace Utilities.Math
 {
@@ -20,13 +19,13 @@ namespace Utilities.Math
         /// </summary>
         public static void AddNextTerm()
         {
-            
-            Int64 counter = PrimesCalculated.Last()+2;
+
+            Int64 counter = PrimesCalculated.Last() + 2;
             bool isPrime = false;
 
             while (!isPrime)
             {
-                
+
                 isPrime = true;
 
                 int i = 0;
@@ -43,11 +42,11 @@ namespace Utilities.Math
 
                 }
 
-                counter+=2;
+                counter += 2;
 
             }
 
-        }       
+        }
 
         /// <summary>
         /// List of Fibonacci items
@@ -93,7 +92,7 @@ namespace Utilities.Math
         /// <returns>True if the number is prime</returns>
         public static bool IsPrime(int number)
         {
-            
+
             CalculateTermsUntilValue(number);
 
             return (PrimesCalculated.Contains(number));
@@ -191,7 +190,7 @@ namespace Utilities.Math
         /// <returns>List of divisors</returns>
         static public List<int> GetListDivisors(Int64 number)
         {
-            
+
             List<int> divisors = new List<int>();
 
             for (int i = 1; i < (number / 2) + 1; i++)

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using Utilities.Math;
 
@@ -18,8 +17,8 @@ namespace Task035
             PrimeNumber.CalculateTermsUntilValue(MAX_NUMBER);
 
             int result = (from p in PrimeNumber.GetListPrimes()
-                    where PrimeNumber.IsCircularPrime(p)
-                    select p).Count();
+                          where PrimeNumber.IsCircularPrime(p)
+                          select p).Count();
 
             Console.WriteLine("Solution: {0}", result);
 

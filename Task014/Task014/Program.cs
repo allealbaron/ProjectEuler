@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 
@@ -31,7 +30,7 @@ namespace Task014
                 else
                 {
                     jumpsTaken++;
-                    result = GetNumberJumps((3*number)+1, jumpsTaken);
+                    result = GetNumberJumps((3 * number) + 1, jumpsTaken);
                 }
             }
             return result;
@@ -43,11 +42,13 @@ namespace Task014
         static void Main()
         {
             int solution = (from n in Enumerable.Range(1, 1000000)
-                     select new 
-                        { n, 
-                         jumps = GetNumberJumps(n, 1) }
+                            select new
+                            {
+                                n,
+                                jumps = GetNumberJumps(n, 1)
+                            }
                      ).OrderByDescending(p => p.jumps).First().n;
-            
+
             Console.WriteLine("Solution: {0}", solution);
         }
     }

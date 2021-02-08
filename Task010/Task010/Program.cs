@@ -19,7 +19,7 @@ namespace Task010
 
             PrimeNumber.CalculateTermsUntilValue(MAX_VALUE);
 
-            Console.WriteLine("Solution: {0}", PrimeNumber.GetListPrimes().Where(p=> (p<MAX_VALUE)).Sum());
+            Console.WriteLine("Solution: {0}", PrimeNumber.GetListPrimes().Where(p => (p < MAX_VALUE)).Sum());
 
         }
     }

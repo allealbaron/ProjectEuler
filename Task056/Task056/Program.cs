@@ -1,6 +1,6 @@
 ﻿using System;
-using Utilities.Math;
 using System.Linq;
+using Utilities.Math;
 
 namespace Task056
 {
@@ -19,7 +19,7 @@ namespace Task056
                     string tempString = Arithmetic.Pow(i.ToString(), j);
 
                     int sum = (from c in tempString.ToCharArray()
-                             select int.Parse(c.ToString())).Sum();
+                               select int.Parse(c.ToString())).Sum();
 
                     if (sum > solution)
                     {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Utilities.Math
+﻿namespace Utilities.Math
 {
     /// <summary>
     /// Palindrome related functions
@@ -26,7 +22,7 @@ namespace Utilities.Math
 
             for (int i = 0; result && i < number.Length / 2; i++)
             {
-                result = (number[i].Equals(number[number.Length-i-1]));
+                result = (number[i].Equals(number[number.Length - i - 1]));
             }
 
             return result;

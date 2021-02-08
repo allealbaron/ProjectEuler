@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Task044
 {
@@ -31,18 +31,18 @@ namespace Task044
             pentagonals.Add(GetPentagonal(2));
 
             int cont = 3;
-            
+
             int difference = 0;
 
-            while (difference==0)
-            { 
+            while (difference == 0)
+            {
                 pentagonals.Add(GetPentagonal(cont));
                 cont++;
 
                 for (int i = 0; difference == 0 && i < pentagonals.Count - 2; i++)
                 {
                     int j = i + 1;
-                    while (j < pentagonals.Count - 1 && pentagonals[i] + pentagonals[j] <= pentagonals.Last() && difference ==0)
+                    while (j < pentagonals.Count - 1 && pentagonals[i] + pentagonals[j] <= pentagonals.Last() && difference == 0)
                     {
                         if (pentagonals[i] + pentagonals[j] == pentagonals.Last())
                         {
@@ -56,9 +56,9 @@ namespace Task044
 
                 }
             }
-            
+
             Console.WriteLine("Solution: {0}", difference);
-            
+
         }
     }
 }

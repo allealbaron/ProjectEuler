@@ -13,13 +13,13 @@ namespace Task034
 
             string totalSum = String.Empty;
 
-            for (int i = 3; i < Factorial.GetFactorialTermAsInt(9)*7; i++)
+            for (int i = 3; i < Factorial.GetFactorialTermAsInt(9) * 7; i++)
             {
                 string factorialSum = String.Empty;
-                
+
                 foreach (char c in i.ToString().ToCharArray())
                 {
-                    factorialSum = Arithmetic.AddNumbers(factorialSum, Factorial.GetFactorialTerm(1+int.Parse(c.ToString())));
+                    factorialSum = Arithmetic.AddNumbers(factorialSum, Factorial.GetFactorialTerm(1 + int.Parse(c.ToString())));
                 }
 
                 if (factorialSum.Equals(i.ToString()))

@@ -34,11 +34,11 @@ namespace Task024
             int i = 0;
             StringBuilder solution = new StringBuilder();
 
-            while (counter < TARGET && i <numbers.Count)
+            while (counter < TARGET && i < numbers.Count)
             {
                 if (!numbers[i])
                 {
-                    if (counter + Factorial.GetFactorialTermAsInt(position+1) < TARGET)
+                    if (counter + Factorial.GetFactorialTermAsInt(position + 1) < TARGET)
                     {
                         counter += Factorial.GetFactorialTermAsInt(position + 1);
                     }
@@ -57,7 +57,7 @@ namespace Task024
             {
                 solution.Append(number);
             }
-            
+
             Console.WriteLine("Solution: {0}", solution.ToString());
 
         }

@@ -1,7 +1,6 @@
 ﻿using System;
-using Utilities.Math;
-using System.Linq;
 using System.Collections.Generic;
+using Utilities.Math;
 
 namespace Task047
 {
@@ -48,15 +47,15 @@ namespace Task047
 
             for (int i = 1; itemNotFound; i++)
             {
-                Dictionary<Int64, Int64> d1 = PrimeNumber.GetIntegerFactorization(i) ;
-                Dictionary<Int64, Int64> d2 = PrimeNumber.GetIntegerFactorization(i+1);
+                Dictionary<Int64, Int64> d1 = PrimeNumber.GetIntegerFactorization(i);
+                Dictionary<Int64, Int64> d2 = PrimeNumber.GetIntegerFactorization(i + 1);
                 Dictionary<Int64, Int64> d3 = PrimeNumber.GetIntegerFactorization(i + 2);
                 Dictionary<Int64, Int64> d4 = PrimeNumber.GetIntegerFactorization(i + 3);
 
-                bool distinctPrimes = CompareFactorizations(d1,d2) && CompareFactorizations(d1, d3) && CompareFactorizations(d1, d4)
+                bool distinctPrimes = CompareFactorizations(d1, d2) && CompareFactorizations(d1, d3) && CompareFactorizations(d1, d4)
                                      && CompareFactorizations(d2, d3) && CompareFactorizations(d2, d4)
                                      && CompareFactorizations(d3, d4);
-                
+
                 if (distinctPrimes)
                 {
                     itemNotFound = false;

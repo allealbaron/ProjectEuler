@@ -9,19 +9,19 @@ namespace Task073
         /// <summary>
         /// 1/2
         /// </summary>
-        private const double half = 1.0/2;
+        private const double half = 1.0 / 2;
 
         /// <summary>
         /// 1/3
         /// </summary>
-        private const double third = 1.0/3;
+        private const double third = 1.0 / 3;
 
         /// <summary>
         /// Main Thread
         /// </summary>
         static void Main()
         {
-            
+
             HashSet<double> solutions = new HashSet<double>();
 
             for (int i = 1; i < 12000; i++)
